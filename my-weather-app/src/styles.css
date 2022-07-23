@@ -1,0 +1,167 @@
+body {
+  font-family: "Dosis", sans-serif;
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  max-width: 600px;
+}
+
+hr {
+  width: 500px;
+  line-height: 1em;
+  color: transparent;
+  display: block;
+  margin: 0 auto;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  padding: 1.5px 0;
+  opacity: 0.5;
+  background: linear-gradient(109.6deg, #099a97 11.2%, rgb(21, 205, 168) 91.1%);
+}
+
+span {
+  height: 100px;
+}
+
+i {
+  padding: 10px;
+  font-size: 28px;
+  color: linear-gradient(
+    96.2deg,
+    rgb(255, 230, 112) 10.4%,
+    rgb(255, 100, 100) 43.8%,
+    rgb(0, 93, 219) 105.8%
+  );
+}
+
+form {
+  display: block;
+}
+
+.container {
+  background: linear-gradient(
+    90.9deg,
+    rgb(255, 187, 187) -8.8%,
+    rgb(255, 220, 177) 12.4%,
+    rgb(255, 249, 177) 35.6%,
+    rgb(220, 255, 177) 59.6%,
+    rgb(177, 218, 255) 84%,
+    rgb(222, 177, 255) 107.9%
+  );
+  border-radius: 30px;
+  box-shadow: 0px 0px 10px rgba(9, 154, 152, 0.624);
+}
+
+.fa-compass {
+  margin: 0 auto;
+  padding-right: 6px;
+  font-size: 30px;
+  color: #2f8f9d;
+  position: relative;
+  vertical-align: middle;
+}
+
+.chosen-city {
+  font-size: 55px;
+  margin-bottom: 5px;
+}
+
+.current-info-table {
+  text-align: center;
+}
+
+img.first-img {
+  width: 130px;
+}
+
+p.weather-description {
+  padding: 15px 0;
+  font-size: 20px;
+  font-style: italic;
+  margin-bottom: 0;
+}
+
+p.weekday {
+  margin-bottom: 0;
+}
+
+.weekday,
+.f-temp {
+  font-size: 20px;
+}
+
+.details-1 {
+  text-align: end;
+}
+
+.details-2 {
+  font-weight: 600;
+  text-align: start;
+}
+
+.col-sm-2 {
+  margin: 0 5px 20px 5px;
+  padding: 5px 9px;
+  background-color: rgba(255, 255, 255, 0.681);
+  box-shadow: 0px 0px 8px rgba(255, 105, 180, 0.393);
+}
+
+#search-bar-input {
+  font-size: 13px;
+  border-radius: 30px;
+  box-shadow: 0px 0px 4px rgba(75, 55, 83, 0.311);
+  padding: 7px 7px;
+  border: none;
+}
+
+#search-bar-input::placeholder {
+  color: #ff75a1df;
+}
+
+#search-btn,
+#current-location-btn {
+  transition: all 200ms ease-in;
+  background-color: rgba(255, 255, 255);
+  color: #ff75a0;
+  border: none;
+  font-size: 13px;
+  border-radius: 30px;
+  padding: 7px 10px;
+  box-shadow: 0px 0px 4px rgb(75, 55, 83, 0.311);
+  --bs-btn-border-color: none;
+}
+
+#search-btn:hover,
+#current-location-btn:hover {
+  cursor: pointer;
+  background-color: #ff75a0;
+  color: whitesmoke;
+}
+#search {
+  flex: 1 1 auto;
+  margin-top: 15px;
+}
+
+#currentTemperature {
+  font-size: 50px;
+}
+
+#date {
+  line-height: 40px;
+  font-size: 20px;
+}
+
+#add-info {
+  margin: 5px 20px;
+  font-size: 21px;
+}
+
+#celsius,
+#fahrenheit {
+  text-decoration: none;
+  font-weight: bold;
+  color: #099a97;
+  font-size: 20px;
+}
