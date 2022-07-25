@@ -1,3 +1,24 @@
+function getDate(date) {
+  currentDate.toLocaleString("en-US", {
+    hour12: false,
+  });
+  let hour = currentDate.getHours();
+  let minutes = currentDate.getMinutes();
+  let weekDays = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  let weekDay = weekDays[currentDate.getDay()];
+
+  let date = document.querySelector("#date");
+  date.innerHTML = `${weekDay}, ${hour}:${minutes}`;
+}
+
 function searchForCity(event) {
   let searchInput = document.querySelector("#search-bar-input").value;
   let city = document.querySelector("#submitted-city");
@@ -10,8 +31,6 @@ function searchForCity(event) {
 function showCurrentWeatherConditions(response) {
   let temp = Math.round(response.data.main.temp);
   temperatureElement.innerHTML = temp;
-  
-
 }
 
 function showPosition(response) {
@@ -25,25 +44,9 @@ function showPosition(response) {
   axios.get(url).then(showCurrentWeatherConditions);
 }
 
-let currentDate = new Date();
-currentDate.toLocaleString("en-US", {
-  hour12: false,
-});
-let hour = currentDate.getHours();
-let minutes = currentDate.getMinutes();
-let weekDays = [
-  "Sunday",
-  "Monday",
-  "Tuesday",
-  "Wednesday",
-  "Thursday",
-  "Friday",
-  "Saturday",
-];
-let weekDay = weekDays[currentDate.getDay()];
-
 let date = document.querySelector("#date");
-date.innerHTML = `${weekDay}, ${hour}:${minutes}`;
+let currentDate = new Date();
+date.innerHTML = getDate(currentDate);
 
 let temperatureElement = document.querySelector("#currentTemperature");
 let searchCityButton = document.querySelector("#search-btn");
