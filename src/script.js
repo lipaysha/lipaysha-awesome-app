@@ -1,9 +1,9 @@
 function getDate(date) {
-  currentDate.toLocaleString("en-US", {
+  now.toLocaleString("en-US", {
     hour12: false,
   });
-  let hour = currentDate.getHours();
-  let minutes = currentDate.getMinutes();
+  let hour = now.getHours();
+  let minutes = now.getMinutes();
   let weekDays = [
     "Sunday",
     "Monday",
@@ -13,10 +13,12 @@ function getDate(date) {
     "Friday",
     "Saturday",
   ];
-  let weekDay = weekDays[currentDate.getDay()];
+  let weekDay = weekDays[now.getDay()];
+  //feb 17 2023 - adding day and month
+  let currentDate = now.getDate();
 
   let date = document.querySelector("#date");
-  date.innerHTML = `${weekDay}, ${hour}:${minutes}`;
+  date.innerHTML = ` ${weekDay}, ${currentDate} th, ${hour}:${minutes}`;
 }
 
 function searchForCity(event) {
@@ -45,8 +47,8 @@ function showPosition(response) {
 }
 
 let date = document.querySelector("#date");
-let currentDate = new Date();
-date.innerHTML = getDate(currentDate);
+let now = new Date();
+date.innerHTML = getDate(now);
 
 let temperatureElement = document.querySelector("#currentTemperature");
 let searchCityButton = document.querySelector("#search-btn");
