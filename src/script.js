@@ -1,5 +1,5 @@
-function getDate(date) {
-  now.toLocaleString("en-US", {
+function getDate(now) {
+ let currentDate = now.toLocaleString("en-US", {
     hour12: false,
   });
   let hour = now.getHours();
@@ -15,10 +15,9 @@ function getDate(date) {
   ];
   let weekDay = weekDays[now.getDay()];
   //feb 17 2023 - adding day and month
-  let currentDate = now.getDate();
+  let date = now.getDate();
 
-  let date = document.querySelector("#date");
-  date.innerHTML = ` ${weekDay}, ${currentDate} th, ${hour}:${minutes}`;
+  return ${weekDay}, ${date} th, ${hour}:${minutes};
 }
 
 function searchForCity(event) {
@@ -46,9 +45,9 @@ function showPosition(response) {
   axios.get(url).then(showCurrentWeatherConditions);
 }
 
-let date = document.querySelector("#date");
+let today = document.querySelector("#date");
 let now = new Date();
-date.innerHTML = getDate(now);
+today.innerHTML = getDate(now);
 
 let temperatureElement = document.querySelector("#currentTemperature");
 let searchCityButton = document.querySelector("#search-btn");
