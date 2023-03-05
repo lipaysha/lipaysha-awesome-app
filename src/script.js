@@ -12,16 +12,16 @@ function showCurrentLocationTemperature(response) {
   temperatureElement.innerHTML = temp;
 }
 
-// function showPosition(response) {
-//   let currentLocationButton = document.querySelector("#current-location-btn");
-//   currentLocationButton.addEventListener("click", showPosition);
+function showPosition(response) {
+  let currentLocationButton = document.querySelector("#current-location-btn");
+  currentLocationButton.addEventListener("click", showPosition);
 
-//   let latitude = position.coords.latitude;
-//   let longitude = position.coords.longitude;
-//   let apiKey = "56d476ff22ec60814055fe5e814322ae";
-//   let url = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
-//   axios.get(url).then(showCurrentLocationTemperature);
-// }
+  let latitude = position.coords.latitude;
+  let longitude = position.coords.longitude;
+  let apiKey = "56d476ff22ec60814055fe5e814322ae";
+  let url = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
+  axios.get(url).then(showCurrentLocationTemperature);
+}
 
 let currentDate = new Date();
 currentDate.toLocaleString(
