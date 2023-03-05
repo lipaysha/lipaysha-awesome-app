@@ -24,9 +24,13 @@ function showCurrentLocationTemperature(response) {
 // }
 
 let currentDate = new Date();
-currentDate.toLocaleString("en-US", {
-  hour12: false
-});
+currentDate.toLocaleString(
+  "en-US",
+  { minimumIntegerDigits: 2, useGrouping: false },
+  {
+    hour12: false,
+  }
+);
 let hour = currentDate.getHours();
 let minutes = currentDate.getMinutes();
 let weekDays = [
@@ -36,7 +40,7 @@ let weekDays = [
   "Wednesday",
   "Thursday",
   "Friday",
-  "Saturday"
+  "Saturday",
 ];
 let weekDay = weekDays[currentDate.getDay()];
 
