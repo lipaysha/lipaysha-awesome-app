@@ -17,7 +17,7 @@ function showCurrentLocationWeather(response) {
   let humidity = Math.round(response.data.main.humidity);
   humidityElement.innerHTML = `${humidity}%`;
   let windSpeed = Math.round(response.data.wind.speed);
-  windSpeedElement.innerHTML = `${wind}m/s`;
+  windSpeedElement.innerHTML = `${windSpeed}m/s`;
 }
 
 // function showPosition(response) {
