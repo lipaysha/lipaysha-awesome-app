@@ -1,4 +1,3 @@
-
 function searchForCity(event) {
   let searchInput = document.querySelector("#search-bar-input");
   let city = document.querySelector("#submitted-city");
@@ -11,8 +10,14 @@ function searchForCity(event) {
 function showCurrentLocationWeather(response) {
   let temp = Math.round(response.data.main.temp);
   temperatureElement.innerHTML = temp;
-  let description = data.weather[0].description;
-  descriptionElement.innerHTML = description
+  let description = response.data.weather[0].description;
+  descriptionElement.innerHTML = description;
+  let feelsLike = Math.round(response.data.main.feels_like);
+  feelsLikeElement.innerHTML = `${feelsLike}°C`;
+  let humidity = Math.round(response.data.main.humidity);
+  humidityElement.innerHTML = `${humidity}%`;
+  let windSpeed = Math.round(response.data.wind.speed);
+  windSpeedElement.innerHTML = `${wind}m/s`;
 }
 
 // function showPosition(response) {
@@ -27,15 +32,11 @@ function showCurrentLocationWeather(response) {
 // }
 
 let currentDate = new Date();
-currentDate.toLocaleString(
-  "en-US",
-  { minimumIntegerDigits: 2, useGrouping: false },
-  {
-    hour12: false,
-  }
-);
-let hour = currentDate.getHours();
-let minutes = currentDate.getMinutes();
+currentDate.toLocaleString("en-US", {
+  hour12: false,
+});
+let hour = currentDate.getHours().toString().padStart(2, "0");
+let minutes = currentDate.getMinutes().toString().padStart(2, "0");
 let weekDays = [
   "Sunday",
   "Monday",
@@ -52,12 +53,13 @@ date.innerHTML = `${weekDay}, ${hour}:${minutes}`;
 
 let temperatureElement = document.querySelector("#currentTemperature");
 let descriptionElement = document.querySelector("#weather-descrip");
+let feelsLikeElement = document.querySelector("#feels-like");
+let humidityElement = document.querySelector("#humidity");
+let windSpeedElement = document.querySelector("#wind-speed");
 let searchCityButton = document.querySelector("#search-btn");
 searchCityButton.addEventListener("click", searchForCity);
 
 // navigator.geolocation.getCurrentPosition(showPosition);
-
-
 
 //  ATHENA code that is not working  05/03/2023
 // const apiKey = "56d476ff22ec60814055fe5e814322ae";
@@ -116,4 +118,3 @@ searchCityButton.addEventListener("click", searchForCity);
 // }
 
 // searchCityButton.addEventListener("click", searchForCity);
-
