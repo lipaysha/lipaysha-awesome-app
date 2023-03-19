@@ -62,33 +62,30 @@
       <!-- Chosen city and current weather/date info-->
       <br />
       <h1 class="chosen-city" id="submitted-city">Skadovsk</h1>
-      <div class="current-info-table align-items-center">
-        <span class="align-middle" id="date">
-          Tuesday, May 21<sup>th</sup>, 14:38</span
-        >
-        <span class="align-middle" id="currentTemperature">25</span>
-        <span class="temperature"> <a href="#" id="celsius">°C</a></span>
+      <ul>
+        <li id="date">Tuesday, May 21<sup>th</sup>, 14:38</li>
+        <li class="weather-description" id="weather-descrip">
+          Sunny and balmy
+        </li>
+      </ul>
+      <div class="row">
+        <div class="col-6" id="currentTemperature">
+          25
+          <sup class="temperature"> <a href="#" id="celsius">°C</a></sup>
+          <img src="media/icons/sun.svg" alt="Sun" class="first-img" />
+        </div>
         <!--<span>|<span class="temperature"> <a href="#" id="fahrenheit">°F</a></span></span>-->
 
-        <span class="align-middle m-2">
-          <img src="media/icons/sun.svg" alt="Sun" class="first-img" />
-        </span>
+        <div class="col-6">
+          <li id="feels-like">Feels like 24°C</li>
+          <li id="humidity">Humidity 63%</li>
+          <li id="wind-speed">Wind speed 24 m/s</li>
+        </div>
       </div>
-
-      <p class="weather-description" id="weather-descrip">Sunny and balmy</p>
 
       <!-- Additional current weather information-->
       <!--Maybe change id's to classes? and leave id's for JS-->
-      <div class="row" id="add-info">
-        <div class="col details-1">Feels like</div>
-        <div class="col details-2" id="feels-like">24°C</div>
-        <div class="w-100"></div>
-        <div class="col details-1">Humidity</div>
-        <div class="col details-2" id="humidity">63%</div>
-        <div class="w-100"></div>
-        <div class="col details-1">Wind speed</div>
-        <div class="col details-2" id="wind-speed">24 m/s</div>
-      </div>
+
       <br />
 
       <!-- 5-day forecast-->
@@ -123,16 +120,16 @@
           <p class="f-temp">20°C</p>
         </div>
       </div>
-    </div>
 
-    <p>
-      <a
-        href="https://github.com/lipaysha/lipaysha-awesome-app/tree/main/my-weather-app"
-        class="open-link"
-        >Open-source code</a
-      >
-      by Anastasiia Lypai ✨
-    </p>
+      <p>
+        <a
+          href="https://github.com/lipaysha/lipaysha-awesome-app/tree/main/my-weather-app"
+          class="open-link"
+          >Open-source code</a
+        >
+        by Anastasiia Lypai ✨
+      </p>
+    </div>
     <script src="src/script.js"></script>
   </body>
 </html>
