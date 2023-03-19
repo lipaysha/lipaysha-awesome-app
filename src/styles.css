@@ -1,24 +1,11 @@
 body {
-  font-family: "Dosis", sans-serif;
+  font-family: "Poppins", sans-serif;
   text-align: center;
   display: block;
   margin: 0 auto;
   margin-top: 25px;
   margin-bottom: 25px;
   max-width: 600px;
-}
-
-hr {
-  width: 500px;
-  line-height: 1em;
-  color: transparent;
-  display: block;
-  margin: 0 auto;
-  margin-top: 5px;
-  margin-bottom: 15px;
-  padding: 1.5px 0;
-  opacity: 0.5;
-  background: linear-gradient(109.6deg, #099a97 11.2%, rgb(21, 205, 168) 91.1%);
 }
 
 span {
