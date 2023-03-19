@@ -13,11 +13,11 @@ function showCurrentLocationWeather(response) {
   let description = response.data.weather[0].description;
   descriptionElement.innerHTML = description;
   let feelsLike = Math.round(response.data.main.feels_like);
-  feelsLikeElement.innerHTML = `${feelsLike}°C`;
+  feelsLikeElement.innerHTML = `Feels like ${feelsLike}°C`;
   let humidity = Math.round(response.data.main.humidity);
-  humidityElement.innerHTML = `${humidity}%`;
+  humidityElement.innerHTML = `Humidity ${humidity}%`;
   let windSpeed = Math.round(response.data.wind.speed);
-  windSpeedElement.innerHTML = `${windSpeed} m/s`;
+  windSpeedElement.innerHTML = `Wind speed ${windSpeed} m/s`;
 }
 
 // function showPosition(response) {
