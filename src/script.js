@@ -51,7 +51,7 @@ let weekDay = weekDays[currentDate.getDay()];
 let date = document.querySelector("#date");
 date.innerHTML = `${weekDay}, ${hour}:${minutes}`;
 
-let temperatureElement = document.querySelector("#currentTemperature");
+let temperatureElement = document.querySelector("#current-temperature");
 let descriptionElement = document.querySelector("#weather-descrip");
 let feelsLikeElement = document.querySelector("#feels-like");
 let humidityElement = document.querySelector("#humidity");
