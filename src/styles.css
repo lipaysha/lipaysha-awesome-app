@@ -5,7 +5,10 @@ body {
   margin: 0 auto;
   margin-top: 25px;
   margin-bottom: 25px;
-  max-width: 600px;
+}
+
+li {
+  list-style: none;
 }
 
 span {
@@ -51,7 +54,7 @@ form {
 }
 
 .chosen-city {
-  font-size: 55px;
+  font-size: 50px;
   margin-bottom: 5px;
 }
 
@@ -60,11 +63,11 @@ form {
 }
 
 img.first-img {
-  width: 130px;
+  width: 70px;
 }
 
-p.weather-description {
-  padding: 15px 0;
+li.weather-description {
+  padding: 2px 0;
   font-size: 20px;
   font-style: italic;
   margin-bottom: 0;
@@ -77,15 +80,6 @@ p.weekday {
 .weekday,
 .f-temp {
   font-size: 20px;
-}
-
-.details-1 {
-  text-align: end;
-}
-
-.details-2 {
-  font-weight: 600;
-  text-align: start;
 }
 
 .col-sm-2 {
@@ -131,7 +125,7 @@ p.weekday {
   margin-top: 15px;
 }
 
-#currentTemperature {
+#current-temperature {
   font-size: 50px;
 }
 
